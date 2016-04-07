@@ -616,43 +616,11 @@ char *yytext;
 #define p_void      286
 #define p_volatile  287
 #define p_while     288
-const char *reservadas[32];
 int nl=1;
 int yylval;
 int conteo[32] = {0};
-reservadas[p_auto-257] = "auto";
-reservadas[p_break-257] = "break";
-reservadas[p_case-257] = "case";
-reservadas[p_char-257] = "char";
-reservadas[p_const-257] = "const";
-reservadas[p_continue-257] = "continue";
-reservadas[p_default-257] = "default";
-reservadas[p_do-257] = "do";
-reservadas[p_double-257] = "double";
-reservadas[p_else-257] = "else";
-reservadas[p_enum-257] = "enum";
-reservadas[p_extern-257] = "extern";
-reservadas[p_float-257] = "float";
-reservadas[p_for-257] = "for";
-reservadas[p_goto-257] = "goto";
-reservadas[p_if-257] = "if";
-reservadas[p_int-257] = "int";
-reservadas[p_long-257] = "long";
-reservadas[p_register-257] = "register";
-reservadas[p_return-257] = "return";
-reservadas[p_short-257] = "short";
-reservadas[p_signed-257] = "signed";
-reservadas[p_sizeof-257] = "sizeof";
-reservadas[p_static-257] = "static";
-reservadas[p_struct-257] = "struct";
-reservadas[p_switch-257] = "switch";
-reservadas[p_typedef-257] = "typedef";
-reservadas[p_union-257] = "union";
-reservadas[p_unsigned-257] = "unsigned";
-reservadas[p_void-257] = "void";
-reservadas[p_volatile-257] = "volatile";
-reservadas[p_while-257] = "while";
-#line 656 "lex.yy.c"
+char *res[] = {"auto","break","case","char","const","continue","default","do","double","else","enum","extern","float","for","goto","if","int","long","register","return","short","signed","sizeof","static","struct","switch","typedef","union","unsigned","void","volatile","while"};
+#line 624 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -839,9 +807,9 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 76 "parser.l"
+#line 44 "parser.l"
 
-#line 845 "lex.yy.c"
+#line 813 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -926,175 +894,175 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 77 "parser.l"
+#line 45 "parser.l"
 ;
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 79 "parser.l"
+#line 47 "parser.l"
 { conteo[p_auto-257]++; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 80 "parser.l"
+#line 48 "parser.l"
 { conteo[p_break-257]++; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 81 "parser.l"
+#line 49 "parser.l"
 { conteo[p_case-257]++; }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 82 "parser.l"
+#line 50 "parser.l"
 { conteo[p_char-257]++; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 83 "parser.l"
+#line 51 "parser.l"
 { conteo[p_const-257]++; }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 84 "parser.l"
+#line 52 "parser.l"
 { conteo[p_continue-257]++; }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 85 "parser.l"
+#line 53 "parser.l"
 { conteo[p_default-257]++; }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 86 "parser.l"
+#line 54 "parser.l"
 { conteo[p_do-257]++; }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 87 "parser.l"
+#line 55 "parser.l"
 { conteo[p_double-257]++; }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 88 "parser.l"
+#line 56 "parser.l"
 { conteo[p_else-257]++; }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 89 "parser.l"
+#line 57 "parser.l"
 { conteo[p_enum-257]++; }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 90 "parser.l"
+#line 58 "parser.l"
 { conteo[p_extern-257]++; }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 91 "parser.l"
+#line 59 "parser.l"
 { conteo[p_float-257]++; }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 92 "parser.l"
+#line 60 "parser.l"
 { conteo[p_for-257]++; }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 93 "parser.l"
+#line 61 "parser.l"
 { conteo[p_goto-257]++; }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 94 "parser.l"
+#line 62 "parser.l"
 { conteo[p_if-257]++; }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 95 "parser.l"
+#line 63 "parser.l"
 { conteo[p_int-257]++; }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 96 "parser.l"
+#line 64 "parser.l"
 { conteo[p_long-257]++; }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 97 "parser.l"
+#line 65 "parser.l"
 { conteo[p_register-257]++; }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 98 "parser.l"
+#line 66 "parser.l"
 { conteo[p_return-257]++; }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 99 "parser.l"
+#line 67 "parser.l"
 { conteo[p_short-257]++; }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 100 "parser.l"
+#line 68 "parser.l"
 { conteo[p_signed-257]++; }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 101 "parser.l"
+#line 69 "parser.l"
 { conteo[p_sizeof-257]++; }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 102 "parser.l"
+#line 70 "parser.l"
 { conteo[p_static-257]++; }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 103 "parser.l"
+#line 71 "parser.l"
 { conteo[p_struct-257]++; }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 104 "parser.l"
+#line 72 "parser.l"
 { conteo[p_switch-257]++; }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 105 "parser.l"
+#line 73 "parser.l"
 { conteo[p_typedef-257]++; }
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 106 "parser.l"
+#line 74 "parser.l"
 { conteo[p_union-257]++; }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 107 "parser.l"
+#line 75 "parser.l"
 { conteo[p_unsigned-257]++; }
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 108 "parser.l"
+#line 76 "parser.l"
 { conteo[p_void-257]++; }
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 109 "parser.l"
+#line 77 "parser.l"
 { conteo[p_volatile-257]++; }
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 110 "parser.l"
+#line 78 "parser.l"
 { conteo[p_while-257]++; }
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 111 "parser.l"
+#line 79 "parser.l"
 ECHO;
 	YY_BREAK
-#line 1098 "lex.yy.c"
+#line 1066 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2092,12 +2060,15 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 111 "parser.l"
+#line 79 "parser.l"
 
 
 main(){
   yylex();
-
+  int i;
+  for(i=0; i<32; i++) {
+    printf("%s --> %d\n", res[i], conteo[i]);
+  }
 
 }
 

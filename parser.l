@@ -34,45 +34,13 @@
 %}
 
 %option case-insensitive
-  const char *reservadas[32];
+
 id    [a-zA-Z][a-zA-Z0-9]*
   int nl=1;
   int yylval;
   int conteo[32] = {0};
 
-
-  reservadas[p_auto-257] = "auto";
-  reservadas[p_break-257] = "break";
-  reservadas[p_case-257] = "case";
-  reservadas[p_char-257] = "char";
-  reservadas[p_const-257] = "const";
-  reservadas[p_continue-257] = "continue";
-  reservadas[p_default-257] = "default";
-  reservadas[p_do-257] = "do";
-  reservadas[p_double-257] = "double";
-  reservadas[p_else-257] = "else";
-  reservadas[p_enum-257] = "enum";
-  reservadas[p_extern-257] = "extern";
-  reservadas[p_float-257] = "float";
-  reservadas[p_for-257] = "for";
-  reservadas[p_goto-257] = "goto";
-  reservadas[p_if-257] = "if";
-  reservadas[p_int-257] = "int";
-  reservadas[p_long-257] = "long";
-  reservadas[p_register-257] = "register";
-  reservadas[p_return-257] = "return";
-  reservadas[p_short-257] = "short";
-  reservadas[p_signed-257] = "signed";
-  reservadas[p_sizeof-257] = "sizeof";
-  reservadas[p_static-257] = "static";
-  reservadas[p_struct-257] = "struct";
-  reservadas[p_switch-257] = "switch";
-  reservadas[p_typedef-257] = "typedef";
-  reservadas[p_union-257] = "union";
-  reservadas[p_unsigned-257] = "unsigned";
-  reservadas[p_void-257] = "void";
-  reservadas[p_volatile-257] = "volatile";
-  reservadas[p_while-257] = "while";
+  char *res[] = {"auto","break","case","char","const","continue","default","do","double","else","enum","extern","float","for","goto","if","int","long","register","return","short","signed","sizeof","static","struct","switch","typedef","union","unsigned","void","volatile","while"};
 %%
 [ \t]+  ;
 
@@ -111,6 +79,9 @@ while      { conteo[p_while-257]++; }
 %%
 main(){
   yylex();
-
+  int i;
+  for(i=0; i<32; i++) {
+    printf("%s --> %d\n", res[i], conteo[i]);
+  }
 
 }
