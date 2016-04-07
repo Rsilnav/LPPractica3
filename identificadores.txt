@@ -1,0 +1,7 @@
+15 m
+9 i
+6 n
+4 max
+7 temp
+3 mOriginal
+3 nOriginal

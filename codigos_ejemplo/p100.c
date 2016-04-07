@@ -3,7 +3,8 @@
 int cycle(m)
     int m;
 {
-    int i = 1;
+    int i;
+    i = 1;
 
     while (m != 1){
         if (m % 2 == 0){
@@ -18,8 +19,12 @@ int cycle(m)
 }
 
 int main(){
-    int m,n,max,temp;
-    int mOriginal,nOriginal;
+    int m;
+    int n;
+    int max;
+    int temp;
+    int mOriginal;
+    int nOriginal;
     int i;
 
     while (scanf("%d %d\n",&m,&n)==2){
