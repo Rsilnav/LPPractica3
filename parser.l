@@ -31,15 +31,14 @@
 #define p_void      286
 #define p_volatile  287
 #define p_while     288
-}%
+%}
 
 %option case-insensitive
+  const char *reservadas[32];
 id    [a-zA-Z][a-zA-Z0-9]*
   int nl=1;
   int yylval;
-  int conteo[p_32] = {0};
-  const char *reservadas[32];
-
+  int conteo[32] = {0};
 
 
   reservadas[p_auto-257] = "auto";
@@ -74,7 +73,6 @@ id    [a-zA-Z][a-zA-Z0-9]*
   reservadas[p_void-257] = "void";
   reservadas[p_volatile-257] = "volatile";
   reservadas[p_while-257] = "while";
-
 %%
 [ \t]+  ;
 
@@ -110,11 +108,9 @@ unsigned      { conteo[p_unsigned-257]++; }
 void      { conteo[p_void-257]++; }
 volatile      { conteo[p_volatile-257]++; }
 while      { conteo[p_while-257]++; }
-
 %%
 main(){
   yylex();
 
 
 }
-%%
