@@ -1,4 +1,4 @@
-#include <stdio.h>;
+#include <stdio.h>
 
 int cycle(m)
     int m;
@@ -22,21 +22,21 @@ int main(){
     int mOriginal,nOriginal;
     int i;
 
-    while (scanf("%d %d\n",&amp;m,&amp;n)==2){
+    while (scanf("%d %d\n",&m,&n)==2){
 
         mOriginal = m;
         nOriginal = n;
 
-        if (m &gt; n){
+        if (m > n){
             temp = m;
             m = n;
             n = temp;
         }
 
         max = cycle(m);
-        for(i=m+1;i&lt;=n;i++) {
+        for(i=m+1;i<=n;i++) {
             temp = cycle(i);
-            if (temp &gt; max)
+            if (temp > max)
             max = temp;
         }
         printf("%d %d %d\n",mOriginal,nOriginal,max);
