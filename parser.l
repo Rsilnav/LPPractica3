@@ -49,41 +49,61 @@ letters [a-zA-Z]
 [^a-zA-Z0-9]+break[^a-zA-Z0-9]+             { conteo[p_break-257]++; };
 [^a-zA-Z0-9]+case[^a-zA-Z0-9]+              { conteo[p_case-257]++; };
 [^a-zA-Z0-9]+char[^a-zA-Z0-9]+              { conteo[p_char-257]++; };
+
 [^a-zA-Z0-9]+const[^a-zA-Z0-9]+             { conteo[p_const-257]++; };
 [^a-zA-Z0-9]+continue[^a-zA-Z0-9]+          { conteo[p_continue-257]++; };
 [^a-zA-Z0-9]+default[^a-zA-Z0-9]+           { conteo[p_default-257]++; };
 [^a-zA-Z0-9]+do[^a-zA-Z0-9]+                { conteo[p_do-257]++; };
 [^a-zA-Z0-9]+double[^a-zA-Z0-9]+            { conteo[p_double-257]++; };
+
 [^a-zA-Z0-9]+else[^a-zA-Z0-9]+              { conteo[p_else-257]++; };
 [^a-zA-Z0-9]+enum[^a-zA-Z0-9]+              { conteo[p_enum-257]++; };
 [^a-zA-Z0-9]+extern[^a-zA-Z0-9]+            { conteo[p_extern-257]++; };
 [^a-zA-Z0-9]+float[^a-zA-Z0-9]+             { conteo[p_float-257]++; };
+
 [^a-zA-Z0-9]+for[^a-zA-Z0-9]+               { conteo[p_for-257]++; };
 [^a-zA-Z0-9]+goto[^a-zA-Z0-9]+              { conteo[p_goto-257]++; };
 [^a-zA-Z0-9]+if[^a-zA-Z0-9]+                { conteo[p_if-257]++; };
 [^a-zA-Z0-9]+int[^a-zA-Z0-9]+               { conteo[p_int-257]++; };
+
 [^a-zA-Z0-9]+long[^a-zA-Z0-9]+              { conteo[p_long-257]++; };
+
 [^a-zA-Z0-9]+register[^a-zA-Z0-9]+          { conteo[p_register-257]++; };
 [^a-zA-Z0-9]+return[^a-zA-Z0-9]+            { conteo[p_return-257]++; };
 [^a-zA-Z0-9]+short[^a-zA-Z0-9]+             { conteo[p_short-257]++; };
+
 [^a-zA-Z0-9]+signed[^a-zA-Z0-9]+            { conteo[p_signed-257]++; };
 [^a-zA-Z0-9]+sizeof[^a-zA-Z0-9]+            { conteo[p_sizeof-257]++; };
 [^a-zA-Z0-9]+static[^a-zA-Z0-9]+            { conteo[p_static-257]++; };
 [^a-zA-Z0-9]+struct[^a-zA-Z0-9]+            { conteo[p_struct-257]++; };
 [^a-zA-Z0-9]+switch[^a-zA-Z0-9]+            { conteo[p_switch-257]++; };
 [^a-zA-Z0-9]+typedef[^a-zA-Z0-9]+           { conteo[p_typedef-257]++; };
+
 [^a-zA-Z0-9]+union[^a-zA-Z0-9]+             { conteo[p_union-257]++; };
 [^a-zA-Z0-9]+unsigned[^a-zA-Z0-9]+          { conteo[p_unsigned-257]++; };
 [^a-zA-Z0-9]+void[^a-zA-Z0-9]+              { conteo[p_void-257]++; };
+
 [^a-zA-Z0-9]+volatile[^a-zA-Z0-9]+          { conteo[p_volatile-257]++; };
 [^a-zA-Z0-9]+while[^a-zA-Z0-9]+             { conteo[p_while-257]++; };
 .|\n                                        ;
 %%
-main(){
-  yylex();
-  int i;
-  for(i=0; i<32; i++) {
-    printf("%d %s\n", conteo[i], res[i]);
-  }
+main(int argc, char** argv){
+
+    if ( argc > 1 )
+        yyin = fopen( argv[1], "r" );
+    else
+        yyin = stdin;
+
+    FILE *fres = fopen("reservadas.txt", "w");
+    FILE *fide = fopen("identificadores.txt", "w");
+
+    yylex();
+    int i;
+    for(i=0; i<32; i++) {
+        fprintf(fres, "%d %s\n", conteo[i], res[i]);
+    }
+
+    fclose(fres);
+    fclose(fide);
 
 }

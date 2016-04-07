@@ -975,180 +975,180 @@ YY_RULE_SETUP
 case 6:
 /* rule 6 can match eol */
 YY_RULE_SETUP
-#line 52 "parser.l"
+#line 53 "parser.l"
 { conteo[p_const-257]++; };
 	YY_BREAK
 case 7:
 /* rule 7 can match eol */
 YY_RULE_SETUP
-#line 53 "parser.l"
+#line 54 "parser.l"
 { conteo[p_continue-257]++; };
 	YY_BREAK
 case 8:
 /* rule 8 can match eol */
 YY_RULE_SETUP
-#line 54 "parser.l"
+#line 55 "parser.l"
 { conteo[p_default-257]++; };
 	YY_BREAK
 case 9:
 /* rule 9 can match eol */
 YY_RULE_SETUP
-#line 55 "parser.l"
+#line 56 "parser.l"
 { conteo[p_do-257]++; };
 	YY_BREAK
 case 10:
 /* rule 10 can match eol */
 YY_RULE_SETUP
-#line 56 "parser.l"
+#line 57 "parser.l"
 { conteo[p_double-257]++; };
 	YY_BREAK
 case 11:
 /* rule 11 can match eol */
 YY_RULE_SETUP
-#line 57 "parser.l"
+#line 59 "parser.l"
 { conteo[p_else-257]++; };
 	YY_BREAK
 case 12:
 /* rule 12 can match eol */
 YY_RULE_SETUP
-#line 58 "parser.l"
+#line 60 "parser.l"
 { conteo[p_enum-257]++; };
 	YY_BREAK
 case 13:
 /* rule 13 can match eol */
 YY_RULE_SETUP
-#line 59 "parser.l"
+#line 61 "parser.l"
 { conteo[p_extern-257]++; };
 	YY_BREAK
 case 14:
 /* rule 14 can match eol */
 YY_RULE_SETUP
-#line 60 "parser.l"
+#line 62 "parser.l"
 { conteo[p_float-257]++; };
 	YY_BREAK
 case 15:
 /* rule 15 can match eol */
 YY_RULE_SETUP
-#line 61 "parser.l"
+#line 64 "parser.l"
 { conteo[p_for-257]++; };
 	YY_BREAK
 case 16:
 /* rule 16 can match eol */
 YY_RULE_SETUP
-#line 62 "parser.l"
+#line 65 "parser.l"
 { conteo[p_goto-257]++; };
 	YY_BREAK
 case 17:
 /* rule 17 can match eol */
 YY_RULE_SETUP
-#line 63 "parser.l"
+#line 66 "parser.l"
 { conteo[p_if-257]++; };
 	YY_BREAK
 case 18:
 /* rule 18 can match eol */
 YY_RULE_SETUP
-#line 64 "parser.l"
+#line 67 "parser.l"
 { conteo[p_int-257]++; };
 	YY_BREAK
 case 19:
 /* rule 19 can match eol */
 YY_RULE_SETUP
-#line 65 "parser.l"
+#line 69 "parser.l"
 { conteo[p_long-257]++; };
 	YY_BREAK
 case 20:
 /* rule 20 can match eol */
 YY_RULE_SETUP
-#line 66 "parser.l"
+#line 71 "parser.l"
 { conteo[p_register-257]++; };
 	YY_BREAK
 case 21:
 /* rule 21 can match eol */
 YY_RULE_SETUP
-#line 67 "parser.l"
+#line 72 "parser.l"
 { conteo[p_return-257]++; };
 	YY_BREAK
 case 22:
 /* rule 22 can match eol */
 YY_RULE_SETUP
-#line 68 "parser.l"
+#line 73 "parser.l"
 { conteo[p_short-257]++; };
 	YY_BREAK
 case 23:
 /* rule 23 can match eol */
 YY_RULE_SETUP
-#line 69 "parser.l"
+#line 75 "parser.l"
 { conteo[p_signed-257]++; };
 	YY_BREAK
 case 24:
 /* rule 24 can match eol */
 YY_RULE_SETUP
-#line 70 "parser.l"
+#line 76 "parser.l"
 { conteo[p_sizeof-257]++; };
 	YY_BREAK
 case 25:
 /* rule 25 can match eol */
 YY_RULE_SETUP
-#line 71 "parser.l"
+#line 77 "parser.l"
 { conteo[p_static-257]++; };
 	YY_BREAK
 case 26:
 /* rule 26 can match eol */
 YY_RULE_SETUP
-#line 72 "parser.l"
+#line 78 "parser.l"
 { conteo[p_struct-257]++; };
 	YY_BREAK
 case 27:
 /* rule 27 can match eol */
 YY_RULE_SETUP
-#line 73 "parser.l"
+#line 79 "parser.l"
 { conteo[p_switch-257]++; };
 	YY_BREAK
 case 28:
 /* rule 28 can match eol */
 YY_RULE_SETUP
-#line 74 "parser.l"
+#line 80 "parser.l"
 { conteo[p_typedef-257]++; };
 	YY_BREAK
 case 29:
 /* rule 29 can match eol */
 YY_RULE_SETUP
-#line 75 "parser.l"
+#line 82 "parser.l"
 { conteo[p_union-257]++; };
 	YY_BREAK
 case 30:
 /* rule 30 can match eol */
 YY_RULE_SETUP
-#line 76 "parser.l"
+#line 83 "parser.l"
 { conteo[p_unsigned-257]++; };
 	YY_BREAK
 case 31:
 /* rule 31 can match eol */
 YY_RULE_SETUP
-#line 77 "parser.l"
+#line 84 "parser.l"
 { conteo[p_void-257]++; };
 	YY_BREAK
 case 32:
 /* rule 32 can match eol */
 YY_RULE_SETUP
-#line 78 "parser.l"
+#line 86 "parser.l"
 { conteo[p_volatile-257]++; };
 	YY_BREAK
 case 33:
 /* rule 33 can match eol */
 YY_RULE_SETUP
-#line 79 "parser.l"
+#line 87 "parser.l"
 { conteo[p_while-257]++; };
 	YY_BREAK
 case 34:
 /* rule 34 can match eol */
 YY_RULE_SETUP
-#line 80 "parser.l"
+#line 88 "parser.l"
 ;
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 81 "parser.l"
+#line 89 "parser.l"
 ECHO;
 	YY_BREAK
 #line 1155 "lex.yy.c"
@@ -2149,15 +2149,27 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 81 "parser.l"
+#line 89 "parser.l"
 
 
-main(){
-  yylex();
-  int i;
-  for(i=0; i<32; i++) {
-    printf("%d %s\n", conteo[i], res[i]);
-  }
+main(int argc, char** argv){
+
+    if ( argc > 1 )
+        yyin = fopen( argv[1], "r" );
+    else
+        yyin = stdin;
+
+    FILE *fres = fopen("reservadas.txt", "w");
+    FILE *fide = fopen("identificadores.txt", "w");
+
+    yylex();
+    int i;
+    for(i=0; i<32; i++) {
+        fprintf(fres, "%d %s\n", conteo[i], res[i]);
+    }
+
+    fclose(fres);
+    fclose(fide);
 
 }
 
